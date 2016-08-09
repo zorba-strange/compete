@@ -1,2 +1,5 @@
-<h1>User#show</h1>
-<p>Find me in app/views/user/show.html.erb</p>
+<div class="page_wrapper">
+  <h1 class="h1_title"><%= @user.username %></h1>
+  <img class="profile_pic" src="<%= @user.profile_url %>" alt="profile picture of <%= @user.username %>">
+  <h3 class="h3_title"><%= @user.bio %></h3>
+</div>

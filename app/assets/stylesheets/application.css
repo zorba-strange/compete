@@ -15,10 +15,25 @@
  */
 
 body {
+  background-image: url("http://wallpapercave.com/wp/Cp0DBma.jpg");
+  height: 100%;
 }
 
 .site_wrapper {
   margin: 0 auto;
-  height: 100vn;
+  height: 100vh;
   max-width: 75%;
+  background-color: rgba(255, 255, 255, .8);
+}
+
+.page_wrapper {
+  margin: 1em 0 0 1em;
+}
+
+.profile_pic {
+  width:  200px;
+  height: 200px;
+  background-position: 50% 50%;
+  background-repeat:   no-repeat;
+  background-size:     cover; 
 }
