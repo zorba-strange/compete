@@ -1,2 +1,13 @@
-<h1>Competition#index</h1>
-<p>Find me in app/views/competition/index.html.erb</p>
+<h1 class="h1_title">Current Competitions</h1>
+
+<div class="comp_index">
+  <% @competitions.each do |comp| %>
+    <h2 class="h2_title"><%= comp.title %></h2>
+    <p>Began on: <%= comp.start_date %>, Ends on: <%= comp.end_date %></p>
+  <% end %>
+    
+
+      
+
+
+
