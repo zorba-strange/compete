@@ -16,6 +16,8 @@
 
 body {
   background-image: url("http://wallpapercave.com/wp/Cp0DBma.jpg");
+  background-size: cover;
+  background-position: fixed;
   height: 100%;
 }
 

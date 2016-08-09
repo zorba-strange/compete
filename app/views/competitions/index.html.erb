@@ -2,7 +2,7 @@
 
 <div class="comp_index">
   <% @competitions.each do |comp| %>
-    <h2 class="h2_title"><%= comp.title %></h2>
+    <h2 class="h2_title"><%= link_to comp.title, competition_path(comp.id) %></h2>
     <p>Began on: <%= comp.start_date %>, Ends on: <%= comp.end_date %></p>
   <% end %>
     

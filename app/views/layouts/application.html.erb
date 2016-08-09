@@ -13,12 +13,12 @@
       <nav class="nav_bar">
         <% if @current_user %>
           <%= link_to @current_user.username, user_path(@current_user) %>
-          <%= link_to "Sign out", session_path, method: :delete %>
+          <%= link_to "Sign out", sessions_path, method: :delete %>
         <% else %>
           <%= link_to "Sign up", new_user_path %>
-          <%= link_to "Login", new_session_path %>
+          <%= link_to "Login", new_sessions_path %>
         <% end %>
-        <%= link_to "Competitions", competition_index_path %>
+        <%= link_to "Competitions", competitions_index_path %>
       </nav>
         
     <%= yield %>

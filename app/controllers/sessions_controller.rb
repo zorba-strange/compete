@@ -15,11 +15,11 @@ class SessionsController < ApplicationController
        redirect_to user_path(session[:user_id])
      else
        flash[:alert] = "Wrong Password"
-       redirect_to new_session_path
+       redirect_to new_sessions_path
      end
    else 
      flash[:alert] = "User Does Not Exist"
-     redirect_to new_session_path
+     redirect_to new_sessions_path
    end
  end
 

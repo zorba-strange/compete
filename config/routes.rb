@@ -1,12 +1,13 @@
 Rails.application.routes.draw do
-  root "welcome#index"
-  get 'welcome/index'
+  root "welcomes#index"
+  get 'welcomes/index'
 
-  get 'competition/index'
+  get 'competitions/index'
 
-  get 'user/show'
+  get 'users/show'
 
-  resources :user
-  resources :competition
-  resource :session
+  resources :memberships, only: [:show, :create, :update, :destroy]
+  resources :users
+  resources :competitions
+  resource :sessions
 end
