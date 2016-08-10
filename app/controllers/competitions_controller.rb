@@ -13,7 +13,8 @@ class CompetitionsController < ApplicationController
 
   def show
     @competition = Competition.find(params[:id])
-
+    @membership = Membership.where(competition_id: params[:id])
+    @user = User.all
   end
 
   def index

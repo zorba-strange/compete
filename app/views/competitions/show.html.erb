@@ -1,6 +1,12 @@
 <div class="page_wrapper">
+  <%= link_to "Join Competition", membership_path(:action=> :create, :user_id=> @current_user.id, :competition_id => @competition.id) %>
   <h1 class="h1_title"><%= @competition.title %></h1>
   <p><%= @competition.info %></p>
+  <% @membership.each do |member| %>
+    <% @user.where(id: member.user_id).each do |user| %>
+      <%= user.username %>
+    <% end %>
+  <% end %>
 </div>
 
 
