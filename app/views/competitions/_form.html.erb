@@ -10,4 +10,8 @@
   <%= f.submit %>
 <% end %>
 
+<% @competition.errors.full_messages.each do |message| %>
+  <p><%= message %></p>
+<% end %>
+
 

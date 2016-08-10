@@ -20,8 +20,11 @@
         <% end %>
         <%= link_to "Competitions", competitions_index_path, class: "nav_links" %>
       </nav>
-        
-    <%= yield %>
+      <% flash.each do |name, msg| %>
+        <%= content_tag :div, msg, class: "alert alert-info" %>
+      <% end %>
+
+      <%= yield %>
     </div>
   </body>
 </html>
