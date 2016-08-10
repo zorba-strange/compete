@@ -17,6 +17,20 @@ class CompetitionsController < ApplicationController
     @user = User.all
   end
 
+  def edit
+    @competition = Competition.find(params[:id])
+  end
+  
+  def update
+    @competition = Competition.find(params[:id])
+    if @competition.save
+      flash[:success] = "Competition Update"
+      redirect_to @competition
+    else
+      render 'edit'
+    end
+  end
+
   def index
     @competitions = Competition.all
   end
