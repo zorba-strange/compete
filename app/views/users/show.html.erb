@@ -2,4 +2,12 @@
   <h1 class="h1_title"><%= @user.username %></h1>
   <img class="profile_pic" src="<%= @user.profile_url %>" alt="profile picture of <%= @user.username %>">
   <h3 class="h3_title"><%= @user.bio %></h3>
+  <% @membership.each do |membership| %>
+    <% @competition.find(membership.competition_id) do |competition| %>
+      <%= link_to competition.title, competition_path(competition.id) %>
+    <% end %>
+
+  <% end %>
+
+
 </div>

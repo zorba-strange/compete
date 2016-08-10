@@ -12,13 +12,13 @@
     <div class="site_wrapper">
       <nav class="nav_bar">
         <% if @current_user %>
-          <%= link_to @current_user.username, user_path(@current_user) %>
-          <%= link_to "Sign out", sessions_path, method: :delete %>
+          <%= link_to "#{@current_user.username}", user_path(@current_user), class: "nav_links" %>
+          <%= link_to "Sign out", sessions_path, method: :delete, class: "nav_links" %>
         <% else %>
-          <%= link_to "Sign up", new_user_path %>
-          <%= link_to "Login", new_sessions_path %>
+          <%= link_to "Sign up", new_user_path, class: "nav_links" %>
+          <%= link_to "Login", new_sessions_path, class: "nav_links" %>
         <% end %>
-        <%= link_to "Competitions", competitions_index_path %>
+        <%= link_to "Competitions", competitions_index_path, class: "nav_links" %>
       </nav>
         
     <%= yield %>

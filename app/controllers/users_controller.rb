@@ -12,6 +12,8 @@ class UsersController < ApplicationController
     
   def show
     @user = User.find(params[:id])
+    @membership = Membership.where(user_id: params[:id])
+    @competition = Competition.all
   end
 
   private

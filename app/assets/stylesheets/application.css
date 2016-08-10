@@ -15,27 +15,135 @@
  */
 
 body {
-  background-image: url("http://wallpapercave.com/wp/Cp0DBma.jpg");
+  background: url("http://freephotos.atguru.in/hdphotos/inspirational-wallpapers/inspirational-desktop-background.jpg") no-repeat center center fixed;
   background-size: cover;
-  background-position: fixed;
   height: 100%;
+  font-family: "Helvetica", "Arial", sans-serif;
+  line-height: 1.5;
+  padding: 4em 1em;
 }
 
+.about_us_wrapper {
+  background-color: rgba(255, 255, 255, .5);
+}
+
+.about_us {
+  margin: 1em;
+  display: inline;
+  border-bottom: 1px solid black;
+}
+
+.welcome_description {
+  margin: 1em;
+}
+
+.h1_title {
+  text-align: center;
+  border-bottom: 1px solid black;
+}
+
+/* the whole site wrapper */
 .site_wrapper {
   margin: 0 auto;
   height: 100vh;
   max-width: 75%;
-  background-color: rgba(255, 255, 255, .8);
+  background-color: rgba(255, 255, 255, .3);
 }
 
+.right_align {
+  text-align: right;
+}
+
+.comp_home_button {
+  margin-right: 1em;
+  border: 1px solid black;
+  padding: .5em;
+}
+
+.comp_home_button:hover {
+  border-color: violet;
+}
+
+/* formatting each page */
 .page_wrapper {
   margin: 1em 0 0 1em;
 }
 
+.member_user {
+  margin-right: 1em;
+}
+
+.member_box {
+  border: 1px solid black;
+  display: inline-block;
+  float: right;
+  margin-right: 1em;
+}
+
+.member_title {
+  text-align: right;
+  margin-right: 1em;
+  margin-left: 1em;
+  border-bottom: 1px solid black;
+}
+/* membership wrapper for comp page */
+.member_wrapper {
+  display: flex;
+  text-align: center;
+  flex-direction: column-reverse;
+}
+
+/* wrapper for join option */
+.join_option {
+  margin-right: 1em;
+  text-align: right;
+}
+
+/* join option for competition */
+.join {
+  border: 1px solid black;
+  padding: .5em;
+}
+
+.join:hover {
+  border-color: violet;
+}
+/* formating the profile pictures */
 .profile_pic {
   width:  200px;
   height: 200px;
   background-position: 50% 50%;
-  background-repeat:   no-repeat;
-  background-size:     cover; 
+  background-repeat: no-repeat;
+  background-size: cover; 
+}
+
+/* Navigation bar wrapper */
+.nav_bar {
+  text-align: right;
+  background-color:rgba(252, 212, 53, 0.8); 
+  height: 2em;
+  padding-top: 7px;
+}
+
+/* removing all text-decoration from links */
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/* Navigation bar links */
+.nav_links {
+  text-decoration: none;
+  color: black;
+  margin: 1px; 
+  border-right: 1px solid black;
+  padding-right: .5em;
+}
+
+.nav_links:last-child {
+  border: none;
+}
+
+a:hover {
+  color: violet;
 }
