@@ -7,9 +7,18 @@ Rails.application.routes.draw do
   get 'users/show'
 
   resources :memberships, only: [:show, :create, :update, :destroy]
-  resources :users
+  resources :users do 
+    resources :memberships, only: [:destory]
+    member do
+      delete 'leave_membership'
+    end
+  end
+
   resources :competitions do 
     resources :memberships ,only: [:create]
+    member do 
+      delete 'membership_delete'
+    end
   end
 
   resource :sessions

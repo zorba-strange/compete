@@ -15,16 +15,17 @@
  */
 
 body {
-  background: url("http://freephotos.atguru.in/hdphotos/inspirational-wallpapers/inspirational-desktop-background.jpg") no-repeat center center fixed;
+  background: url("http://wallpapersrang.com/wp-content/uploads/2015/12/cherry-blossom-wallpaper.jpg") no-repeat  fixed;
   background-size: cover;
   height: 100%;
   font-family: "Helvetica", "Arial", sans-serif;
   line-height: 1.5;
+  color: white;
 }
 
-.about_us_wrapper {
-  background-color: rgba(255, 255, 255, .5);
-}
+/* .about_us_wrapper { */
+/*   background-color: rgba(255, 255, 255, .5); */
+/* } */
 
 .about_us {
   margin: 1em;
@@ -47,7 +48,7 @@ body {
   height: 100vh;
   overflow: auto;
   max-width: 75%;
-  background-color: rgba(255, 255, 255, .3);
+  background-color: rgba(255, 40, 180, 0.4);
 }
 
 .right_align {
@@ -61,7 +62,7 @@ body {
 }
 
 .comp_home_button:hover {
-  border-color: violet;
+  border-color: rgba(46, 198, 249, 0.76);
 }
 
 /* formatting each page */
@@ -71,6 +72,10 @@ body {
 
 .member_user {
   margin-right: 1em;
+}
+
+.member_user:first-of-type {
+  margin-bottom: 1em;
 }
 
 .member_box {
@@ -107,10 +112,10 @@ body {
 }
 
 .join:hover {
-  border-color: violet;
+  border-color: rgba(46, 198, 249, 0.76);
 }
 .update:hover {
-  border-color: violet;
+  border-color: rgba(46, 198, 249, 0.76);
 }
 
 .update {
@@ -124,12 +129,14 @@ body {
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover; 
+  border-radius: 3em;
+  border: 2px solid black;
 }
 
 /* Navigation bar wrapper */
 .nav_bar {
   text-align: right;
-  background-color:rgba(252, 212, 53, 0.8); 
+  background-color:rgba(255, 255, 255, .5);
   height: 2em;
   padding-top: 7px;
 }
@@ -154,5 +161,5 @@ a {
 }
 
 a:hover {
-  color: violet;
+  color: rgba(46, 198, 249, 0.76);
 }

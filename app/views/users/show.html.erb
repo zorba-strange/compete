@@ -1,13 +1,21 @@
 <div class="page_wrapper">
   <h1 class="h1_title"><%= @user.username %></h1>
+  <div class="join_option">
+  <%= link_to "UPDATE", edit_user_path(@user), :class=> "join" %>
+  </div>
   <img class="profile_pic" src="<%= @user.profile_url %>" alt="profile picture of <%= @user.username %>">
   <h3 class="h3_title"><%= @user.bio %></h3>
-  <% @membership.each do |membership| %>
-    <% @competition.find(membership.competition_id) do |competition| %>
-      <%= link_to competition.title, competition_path(competition.id) %>
-    <% end %>
+  <div class="member_box">
+    <h3 class="member_title">Current Competitions</h3>
+    <% @membership.each do |membership| %>
+      <% @competition.find(membership.competition_id) do |competition| %>
+        <div class="member_wrapper">
+          <div class="member_user"><%= link_to competition.title, competition_path(competition.id) %></div>
+        </div>
+      <% end %>
 
-  <% end %>
+    <% end %>
+  </div>
 
 
 </div>

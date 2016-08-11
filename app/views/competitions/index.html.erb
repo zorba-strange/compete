@@ -1,6 +1,9 @@
 <div class="page_wrapper">
   <h1 class="h1_title">Current Competitions</h1>
 
+  <div class="join_option">
+    <%= link_to "CREATE", new_competition_path, :class=> "join"%>
+  </div>
   <div class="comp_index">
     <% @competitions.each do |comp| %>
       <h2 class="h2_title"><%= link_to comp.title, competition_path(comp.id) %></h2>

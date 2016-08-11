@@ -1,9 +1,14 @@
 class MembershipsController < ApplicationController
 
   def show
-    @membership = Membership.find(params[:id])
-    @competition = Competition.find(params[:id])
-    redirect_to competition_path(@competition)
+    if @mebership
+      @membership = Membership.find(params[:id])
+      @competition = Competition.find(params[:id])
+      redirect_to competition_path(@competition)
+    else
+      @competition = Competition.find(params[:id])
+      redirect_to competition_path(@competition)
+    end
   end
 
   def create
@@ -16,13 +21,10 @@ class MembershipsController < ApplicationController
     redirect_to competition_path(@competition)
   end
 
-  def destroy
-    @current_user = User.find(session[:user_id])
-    @competition = Competition.find(params[:competition_id])
-    @membership = Membership.find({user_id: @current_user.id, competition_id: @competition.id})
-    @membership.destory
-    redirect_to user_path(@current_user)
-
+  def delete
+    @current_user = sessions[:user_id]
+    @current_user.membership.destroy_all
+    redirect_to competitions_path
   end
-    
+      
 end

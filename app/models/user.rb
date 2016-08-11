@@ -1,4 +1,4 @@
 class User < ApplicationRecord
-  has_many :memeberships
+  has_many :memberships
   has_many :competitions, through: :memberships
 end

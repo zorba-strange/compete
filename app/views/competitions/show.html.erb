@@ -3,6 +3,9 @@
   <div class="join_option">
     <%= link_to "JOIN", competition_memberships_path(@competition), :method=> :post, :class=> "join"%>
     <%= link_to "UPDATE", edit_competition_path(@competition), :class=> "update" %>
+    <%= link_to "LEAVE", leave_membership_user_path(@current_user), :method=> :delete, :class=> "update" %>
+    <%= link_to "REMOVE", competition_path, :method=> :delete, :class=> "update" %>
+
   </div>
   <h3>Description</h3>
   <p class="comp_info"><%= @competition.info %></p>

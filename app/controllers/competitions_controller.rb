@@ -1,14 +1,12 @@
 class CompetitionsController < ApplicationController
 
   def new
-    redirect_to root_path unless @current_user
     @competition = Competition.new
   end
 
   def create
-    redirect_to root_path unless @current_user
     @competition = Competition.create!(comp_params)
-    redirect_to competition_show_path(@competition.id)
+    redirect_to competition_path(@competition)
   end
 
   def show
@@ -23,7 +21,7 @@ class CompetitionsController < ApplicationController
   
   def update
     @competition = Competition.find(params[:id])
-    if @competition.save
+    if @competition.update(comp_params)
       flash[:success] = "Competition Update"
       redirect_to @competition
     else
@@ -33,6 +31,12 @@ class CompetitionsController < ApplicationController
 
   def index
     @competitions = Competition.all
+  end
+
+  def destroy
+    @competition = Competition.find(params[:id])
+    @competition.destroy
+    redirect_to competitions_path
   end
 
   private
